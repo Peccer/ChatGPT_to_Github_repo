@@ -1,4 +1,4 @@
-// Adjust 
+// START - ADJUST INPUT TO YOUR PREFERENCES ------------------------------------------------------
 
 
 // Add your token, How?:
@@ -14,6 +14,9 @@ const github_repo_name = "chat_gpt_results"
 
 // Add your Google Cloud Function link ( I used a Generation 2 GCF). No GCF yet? Follow the instructions in file "Google_Cloud_function_ChatGPT_Github.py"
 const gcf_link = "https://..........-uc.a.run.app/";
+
+
+// END - ADJUST INPUT TO YOUR PREFERENCES --------------------------------------------------------
 
 // Delay function to introduce delay
 const delay = (delayInms) => {
