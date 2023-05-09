@@ -1,2 +1,4 @@
-# GPT_public
-Anything GPT related that I publicly share. Including scripts to export ChatGPT data to github (or anywhere you like)
+# Chat GPT messages to Github repository
+Workflow: 
+1. Inject scripts into developer console browser to fetch ChatGPT messages
+2. Send it to a Google Cloud Function (GCF) to create file in a Github repository
