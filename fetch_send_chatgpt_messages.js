@@ -17,7 +17,7 @@ const github_repo_name = "chat_gpt_results"
 const gcf_link = "https://..........-uc.a.run.app/";
 
 
-// END - ADJUST INPUT TO YOUR PREFERENCES --------------------------------------------------------
+// END - DO NOT ADJUST BELOW (unless you know what you're doing) --------------------------------------
 
 // Delay function to introduce delay
 const delay = (delayInms) => {
