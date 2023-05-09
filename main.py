@@ -32,7 +32,6 @@ def cors_enabled_function(request):
     # using an access token
     g = Github(GIT_TOKEN)
 
-    print(request.get_json())
     d = request.get_json()
     title = str(d["title"])
     file_content = str(d["gpt_text"])
@@ -44,7 +43,6 @@ def cors_enabled_function(request):
     # Then play with your Github objects:
     for repo in g.get_user().get_repos():
         if repo.name == repo_name:
-            # print(repo.get_contents())
             try:
                 repo.create_file(title+"py", "init commit", file_content)
             except:
