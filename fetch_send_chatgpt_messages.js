@@ -1,3 +1,6 @@
+// Adjust 
+
+
 // Add your token, How?:
 // Open your browser > go to chat.openai.com (and log in if needed) > open developer console (F12) > open the "network" tab
 // Click on one of your "chat messages" in the sidebar
@@ -8,6 +11,9 @@ const headers = { 'Authorization': 'Bearer '+bearer_token}; // auth header with 
 
 // Create a github repository where you want your chat gpt results to appear & add the name of the repo here
 const github_repo_name = "chat_gpt_results"
+
+// Add your Google Cloud Function link ( I used a Generation 2 GCF). No GCF yet? Follow the instructions in file "Google_Cloud_function_ChatGPT_Github.py"
+const gcf_link = "https://..........-uc.a.run.app/";
 
 // Delay function to introduce delay
 const delay = (delayInms) => {
@@ -66,7 +72,6 @@ function clean_mapping(data_arr) {
 
 // Function to post data to a Google Cloud Function
 async function gpt_to_gcf(arr_data) {
-  const gcf_link = "https://chatgpt-to-github-f2lwasf6hq-uc.a.run.app/";
   for (const data of arr_data) {
     try {
       const response = await fetch(gcf_link, {
