@@ -13,6 +13,7 @@ const headers = { 'Authorization': 'Bearer '+bearer_token}; // auth header with 
 const github_repo_name = "chat_gpt_results"
 
 // Add your Google Cloud Function link ( I used a Generation 2 GCF). No GCF yet? Follow the instructions in file "Google_Cloud_function_ChatGPT_Github.py"
+// You can find the link by going to your GCF and copy the URL that is in the "TRIGGER" navigation menu item
 const gcf_link = "https://..........-uc.a.run.app/";
 
 
