@@ -13,17 +13,21 @@ WORKFLOW:
 
 2. In the configuration (first step when editing/creating the GCF): 
 - Give your function a name + make sure to set "authentication" to "allowd unauthenticated invocations"
+
 ![image](https://github.com/Peccer/ChatGPT_to_Github_repo/assets/5719371/89c5fa32-efc3-4804-aa92-b56f94014f74)
 
 - Add an environment variable named "GIT_TOKEN" and as value, use the fine-grained secret that you created before.
+
 ![image](https://github.com/Peccer/ChatGPT_to_Github_repo/assets/5719371/4cef0036-851a-4d5f-80aa-6946c7ffeaf9)
 
 3. Select Python 3.11 in runtime
+
 ![image](https://github.com/Peccer/ChatGPT_to_Github_repo/assets/5719371/0b6cf3b9-115c-4f86-b666-3628f758002a)
 
 4. Copy paste the contents of the main.py file in this repository in the GCF file. Do the same for the requirements.txt file.
 
 5. Make sure to give the entry point the same name as the function in main.py. In this case "cors_enabled_function"
+
 ![image](https://github.com/Peccer/ChatGPT_to_Github_repo/assets/5719371/874e64d9-e37f-4ed7-aef3-351b31440b76)
 
 6. Deploy your function. This can take a minute or two
