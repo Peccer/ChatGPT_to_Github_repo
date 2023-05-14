@@ -59,17 +59,29 @@ function clean_mapping(data_arr) {
   for (const data of data_arr) {
     const title = data.title;
     const mapping = [data.mapping];
-    console.log(mapping)
+    // console.log(title)
+    // console.log(mapping)
+    // console.log(mapping)
     let text_to_join = "";
-    for (const message of mapping) {
-      try {
-        const text = message.message.content.parts[0];
-        text_to_join += text;                
-      } catch (error) {
-        console.log("Skipping message because no content", error);
+    for (const messages of mapping) {
+      // console.log(messages)
+      for(message in messages){
+        // console.log(messages[message])
+        try {
+          const text = messages[message].message.content.parts[0];
+          text_to_join += text;                
+        } catch (error) {
+          console.log("Skipping message because no content", error);
+        }        
       }
+
     }
-    text_arr.push({ "title": title, "gpt_text": text_to_join,"repo_name": github_repo_name });
+    if(text_to_join.length > 1){
+      text_arr.push({ "title": title, "gpt_text": text_to_join,"repo_name": github_repo_name });
+    }
+    else{
+      console.log("Empty text for title: "+title)
+    }
   }
   return text_arr;
 };
