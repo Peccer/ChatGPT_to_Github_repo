@@ -61,7 +61,6 @@ function clean_mapping(data_arr) {
     const mapping = [data.mapping];
     // console.log(title)
     // console.log(mapping)
-    // console.log(mapping)
     let text_to_join = "";
     for (const messages of mapping) {
       // console.log(messages)
@@ -74,13 +73,12 @@ function clean_mapping(data_arr) {
           console.log("Skipping message because no content", error);
         }        
       }
-
     }
     if(text_to_join.length > 1){
       text_arr.push({ "title": title, "gpt_text": text_to_join,"repo_name": github_repo_name });
     }
     else{
-      console.log("Empty text for title: "+title)
+      console.log("Empty text for : "+title)
     }
   }
   return text_arr;
